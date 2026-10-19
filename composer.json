@@ -1,0 +1,23 @@
+{
+    "name": "php-baremetal/esp32-gpio-hal",
+    "description": "ESP32 implementation of the neutral GPIO HAL (bm_gpio_hal.h) over driver/gpio. Carries the esp_driver_gpio idf-requires so the neutral ext-gpio carries none.",
+    "type": "bm-hal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gianfrancesco Aurecchia",
+            "email": "gianfri@aurecchia.com"
+        }
+    ],
+    "provide": {
+        "php-baremetal/gpio-hal": "1.0.0"
+    },
+    "extra": {
+        "baremetal": {
+            "platform": "esp32",
+            "idf-requires": [
+                "esp_driver_gpio"
+            ]
+        }
+    }
+}
